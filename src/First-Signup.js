@@ -1,4 +1,4 @@
-import SearchEmail from "./SearchEmail";
+import SearchEmail from "./DetailsModal/SubmitEmail";
 
 
 function FirstSignUp() {
