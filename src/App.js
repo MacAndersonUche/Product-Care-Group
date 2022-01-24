@@ -1,7 +1,8 @@
 import { useState } from "react";
-import AppContext from "./AppContext";
+import AppContext from "./Error-and-Utilities/AppContext";
 import SubmitOtherDetails from "./DetailsModal/SubmitOtherDetails";
 import FirstSignUp from "./First-Signup";
+import ErrorModal from "./Error-and-Utilities/ErrorModal";
 
 function App() {
 
@@ -28,9 +29,10 @@ function App() {
     <div>
 
       <AppContext.Provider value={globalContext}>
-        {!error && !isEmailSent && <FirstSignUp />}
+        <FirstSignUp />
+        {/* {!error && !isEmailSent && <FirstSignUp />} */}
         {isEmailSent && <SubmitOtherDetails />}
-
+        {error && <ErrorModal />}
 
       </AppContext.Provider>
 

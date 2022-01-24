@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import styled from "styled-components";
-import AppContext from "../AppContext";
+import AppContext from "../Error-and-Utilities/AppContext";
 
 
 const Main = styled.form`
@@ -48,6 +48,8 @@ function SubmitEmail() {
             })
 
             if (response.status !== 200) {
+                Context.setError(true);
+                Context.setResponseStat(response.status)
                 throw new Error("There was an error")
 
             } else {
@@ -66,9 +68,7 @@ function SubmitEmail() {
     function submit(e) {
         e.preventDefault()
 
-        sendEmail()
-
-        // Context.setEmailDetails("")
+        sendEmail();
 
 
     }
