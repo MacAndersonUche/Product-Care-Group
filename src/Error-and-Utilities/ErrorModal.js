@@ -22,8 +22,7 @@ const ErrorModal = () => {
                 <Main>
                     <h3>There were an error </h3>
                     <div>
-                        <p>The error code is: {Context.responseStat}. This means the email is either already present in the database
-                            or isnt present at all</p>
+                        <p>The error code is: {Context.responseStat}. This means the email is  already present in the database.</p>
                         <CloseBtn />
                     </div>
 
