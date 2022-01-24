@@ -24,7 +24,7 @@ width: 20%;
 height: 100%;
 
 &:focus {
-    background-color: blue;
+    background-color: grey;
 }
 `
 
